@@ -52,7 +52,7 @@ class Usuario(models.Model):
     rolAdmin = models.BooleanField(blank=True)
     descripcion = models.TextField(blank=True, null=True)
     banco = models.CharField(
-        max_length=50, choices=Banco.choices, default=Banco.BANCOLOMBIA)
+        max_length=50, choices=Banco.choices, default=Banco.BANCOLOMBIA, blank=True, null=True)
     numeroCuenta = models.CharField(max_length=20, blank=True, null=True)
     daviplata = models.CharField(max_length=12, blank=True, null=True)
     fechaRegistro = models.DateField(blank=True, null=True)
